@@ -3,7 +3,7 @@
 
 <h3>SOBRE O PROJETO 🧠</h3>
 <P>Esse é o meu segundo portfolio criado, com boas melhoras em questões estéticas e de diminuição do código CSS, além de algumas melhoras no código javascript.</P>
-<P> Ainda há muito o que melhorar, deixá-lo mais fluido e organizado. Porém, o deixei responsivo o suficiente para ser utilizado tanto nas menores telas possíveis quanto em monitores ultrawide.</P>
+<P> Ainda há muito o que melhorar, deixá-lo mais fluido e organizado. Porém, o deixei responsivo o suficiente para ser utilizado tanto nas menores telas possíveis quanto em monitores ultrawide. As imagens e logo são genéricas pois ainda não finalizei a minha identidade visual.</P>
 
 <h3>TECNOLOGIAS UTILIZADAS 🖥 </h3>
 <P>👉 HTML </P>
