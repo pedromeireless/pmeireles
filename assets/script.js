@@ -4,15 +4,28 @@ let closeBtn = document.querySelector('.close-btn')
 let menuHamburguer = document.getElementById('menu-btn')
 let content = document.querySelector('main')
 
-window.addEventListener('resize', (e)=> {
-    if (window.innerWidth <= 500){
+function verificaTamanho(){
+    if (window.matchMedia('(max-width: 500px)').matches) {
+        console.log('oi')
         menuHamburguer.addEventListener('click', ()=>{
             showSideBar()
         });
-    } else {
+    }  else {
         closeSideBar()
     };
-})
+}
+
+verificaTamanho()
+
+// window.addEventListener('load', (e)=> {
+//     if (window.matchMedia('(max-width: 500px)').matches){
+//         menuHamburguer.addEventListener('click', ()=>{
+//             showSideBar()
+//         });
+//     } else {
+//         closeSideBar()
+//     };
+// })
 
 closeBtn.addEventListener('click', () =>{
     closeSideBar()
