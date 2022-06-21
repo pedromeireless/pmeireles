@@ -13,6 +13,7 @@ body, html {
     margin: 0em;
     padding: 0em;
 }
+
 header {
     background: var(--first-background-color);
 }
@@ -275,25 +276,25 @@ main {
 }
 
 @media only screen and (max-width: 500px) {
-    .menu {
-        height: 100%;
-        width: 30%;
-        background-color: #C31824;
-        position: absolute;
-        top: 0;
-        right: 0;
-        display: none;
-        transition: all 1s;
-    }
+   
     .menu-hamburguer {
         display: block;
         width: 24px;
         margin-right: 10px;
     }
-    .menu ul {
-        flex-direction: column;
+    .menuVertical {
+        height: 100%;
         padding: 0px;
+        margin-top: 0px;
+        width: 35vw;
+        flex-direction: column;
         align-items: center;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        background-color: #C31824;
+        transition: all 1s;
+        z-index: 2;
     }
     .header-img {
         width: 100px;
@@ -302,7 +303,7 @@ main {
     .close-btn {
         display: block;
     }
-    .menu ul li {
+    .menuVertical li {
         padding: 10px;
     }
     .cursos-feitos{
