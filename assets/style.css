@@ -213,19 +213,26 @@ main {
         justify-content: space-between;
         width: 100%;
     }
-    .project-btn button {
-        width: 45%;
+    .btn-link {
+        width: 100%;
+        text-decoration: none;
+        color: var(--red-text-color);
+    }
+    .btn-link button {
+        width: 98%;
+        margin: 5px 2px 0px 2px;
         padding: 10px;
         background-color: var(--first-background-color);
         border: solid 1px var(--buttons-color);
-        color: var(--white-text-color);
         transition: all 0.3s;
         cursor: pointer;
         border-radius: 6px;
+        color: var(--white-text-color);
     }
-    .project-btn button:hover {
+    
+    .btn-link button:hover {
         background-color: #ffffff;
-        color: rgb(221, 43, 43);
+        color: var(--red-text-color);
         transform: scale(1.02);
     }
 /* END OF PROJECTS SECTION */
