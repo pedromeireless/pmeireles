@@ -295,6 +295,10 @@ main {
         padding: 0px;
         align-items: center;
     }
+    .header-img {
+        width: 100px;
+        margin-left: 5px;
+    }
     .close-btn {
         display: block;
     }
