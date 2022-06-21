@@ -4,31 +4,30 @@ let closeBtn = document.querySelector('.close-btn')
 let menuHamburguer = document.getElementById('menu-btn')
 let content = document.querySelector('main')
 
-function verificaTamanho(){
-    if (window.matchMedia('(max-width: 500px)').matches) {
-        console.log('oi')
-        menuHamburguer.addEventListener('click', ()=>{
-            showSideBar()
-        });
-    }  else {
-        closeSideBar()
-    };
-}
 
-verificaTamanho()
-
-// window.addEventListener('load', (e)=> {
-//     if (window.matchMedia('(max-width: 500px)').matches){
-//         menuHamburguer.addEventListener('click', ()=>{
-//             showSideBar()
-//         });
-//     } else {
-//         closeSideBar()
-//     };
-// })
+menuHamburguer.addEventListener('click', ()=>{
+    showSideBar()
+})
 
 closeBtn.addEventListener('click', () =>{
     closeSideBar()
+})
+
+document.addEventListener('click', function(e){
+    const el = e.target;
+    if (el.classList.contains('menu-btn')){
+        closeSideBar()
+    }
+})
+
+window.addEventListener('resize', (e)=> {
+    if (window.innerWidth < 500){
+        menuHamburguer.addEventListener('click', ()=>{
+          showSideBar()
+        });
+    } else {
+          closeSideBar()
+    };
 })
 
 function showSideBar(){
@@ -46,13 +45,3 @@ function closeSideBar(){
         showSideBar()
     }
 }
-
-document.addEventListener('click', function(e){
-    const el = e.target;
-
-    if (el.classList.contains('menu-btn')){
-        closeSideBar()
-    }
-    
-})
- 
