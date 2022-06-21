@@ -5,13 +5,13 @@ let menuHamburguer = document.getElementById('menu-btn')
 let content = document.querySelector('main')
 
 window.addEventListener('resize', (e)=> {
-    if (window.innerWidth < 500){
+    if (window.innerWidth <= 500){
         menuHamburguer.addEventListener('click', ()=>{
             showSideBar()
-        })
+        });
     } else {
         closeSideBar()
-    }
+    };
 })
 
 closeBtn.addEventListener('click', () =>{
@@ -33,4 +33,13 @@ function closeSideBar(){
         showSideBar()
     }
 }
+
+document.addEventListener('click', function(e){
+    const el = e.target;
+
+    if (el.classList.contains('menu-btn')){
+        closeSideBar()
+    }
+    
+})
  
