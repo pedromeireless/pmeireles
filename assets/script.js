@@ -1,33 +1,36 @@
-// header area
-    let menuHamburguer = document.getElementById('menu-btn')
-    let menuzada = document.querySelector('.menu')
-    let closeBtn = document.querySelector('.close-btn')
 
-    function toggleSideNav(){
-        if (menuHamburguer.style.display = 'block' && window.innerWidth <= 500) {
-            menuzada.style.display = 'block'
-        } else {
-            menuzada.style.display = 'none'
-        }
+let menuMobile = document.querySelector('.menuVertical')
+let closeBtn = document.querySelector('.close-btn')
+let menuHamburguer = document.getElementById('menu-btn')
+let content = document.querySelector('main')
+
+window.addEventListener('resize', (e)=> {
+    if (window.innerWidth < 500){
+        menuHamburguer.addEventListener('click', ()=>{
+            showSideBar()
+        })
+    } else {
+        closeSideBar()
     }
+})
 
-    function closeSideBar(){
-        if (menuzada.style.display = 'block'){
-            return menuzada.style.display = 'none'
-        }
+closeBtn.addEventListener('click', () =>{
+    closeSideBar()
+})
+
+function showSideBar(){
+    if (menuMobile.style.left = '100%') {
+        menuMobile.style.left = '65%'
+        content.style.filter = 'blur(1px)'
     }
+}
 
-    function showBigNav(){
-        if (window.innerWidth > 501) {
-            menuzada.style.display = 'flex'
-        } else if (window.matchMedia("(max-width: 500px)").matches) {
-            menuzada.style.display = 'none'
-        }
+function closeSideBar(){
+    if (menuMobile.style.left = '65%') {
+        menuMobile.style.left = '100%'
+        content.style.filter = ''
+    } else {
+        showSideBar()
     }
-
-    window.addEventListener('resize', function(){
-        showBigNav()
-    })
-    
-// end of header area
-
+}
+ 
