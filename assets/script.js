@@ -6,7 +6,6 @@
     function toggleSideNav(){
         if (menuHamburguer.style.display = 'block' && window.innerWidth <= 500) {
             menuzada.style.display = 'block'
-            menuzada.style.animationName = 'shownav'
         } else {
             menuzada.style.display = 'none'
         }
