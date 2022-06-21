@@ -37,9 +37,13 @@ header img {
     padding: 15px;
     text-decoration: none;
     color: var(--white-text-color);
+    font-size: 18px;
 }
 .menu-hamburguer, .close-btn{
     display: none;
+    transition: all 1s;
+}
+.menu_btn {
     transition: all 1s;
 }
 main {
@@ -64,13 +68,13 @@ main {
         justify-content: space-around;
         align-items: center;
         gap: 20px;
-        
     }
     .hello-section h1 {
         color: var(--red-text-color);
         font-weight: 600;
         font-size: 44px;
-        margin: 5px 0px 5px 0px;
+        width: 90%;
+        margin: 10px auto;
     }
     .hello-section h4 {
         color: var(--white-text-color);
@@ -113,6 +117,7 @@ main {
         padding: 25px;
         box-shadow: 1px -1px 7px 0px #C31824;
         transition: all 0.5s;
+        animation: wobble 5s ease 1s 2 alternate-reverse both;
     }
     .skill h1{
         color: var(--red-text-color);
@@ -286,7 +291,7 @@ main {
         height: 100%;
         padding: 0px;
         margin-top: 0px;
-        width: 35vw;
+        width: 35%;
         flex-direction: column;
         align-items: center;
         position: absolute;
@@ -331,4 +336,26 @@ main {
     .footer-text h3:not(:first-child) {
         margin-top: 1px;
     }
+}
+@keyframes wobble {
+	0%,
+	100% {
+		transform: translateX(0%);
+		transform-origin: 50% 50%;
+	}
+	15% {
+		transform: translateX(-30px) rotate(-6deg);
+	}
+	30% {
+		transform: translateX(15px) rotate(6deg);
+	}
+	45% {
+		transform: translateX(-15px) rotate(-3.6deg);
+	}
+	60% {
+		transform: translateX(9px) rotate(2.4deg);
+	}
+	75% {
+		transform: translateX(-6px) rotate(-1.2deg);
+	}
 }
