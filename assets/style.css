@@ -56,10 +56,13 @@ main {
         transition: all 1s;
     }
     .hello-section img {
-        margin-top: 10px;
+        margin-top: 20px;
+        width: 300px;
     }
     .hello-container {
         justify-content: space-around;
+        align-items: center;
+        gap: 20px;
         
     }
     .hello-section h1 {
@@ -71,8 +74,12 @@ main {
     .hello-section h4 {
         color: var(--white-text-color);
         font-weight: 100;
+        width: 90%;
+        margin: 10px auto;
     }
-
+    .contact-me a {
+        padding-left: 5px;
+    }
 
 /* END OF HELLO SECTION */
 
